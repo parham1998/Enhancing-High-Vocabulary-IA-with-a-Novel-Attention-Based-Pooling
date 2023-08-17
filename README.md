@@ -17,7 +17,7 @@ We employed the [SSGRL](https://github.com/HCPLab-SYSU/SSGRL) settings when work
 ![model](https://user-images.githubusercontent.com/85555218/230767368-82d92d2b-9374-4198-bd98-f548ce1bc788.jpg)
 
 ## Attention Maps
-![Attention](https://github.com/parham1998/Enhancing-High-Vocabulary-IA-with-a-Novel-Attention-Based-Pooling/assets/85555218/ae319edb-433c-46fa-bf1c-d58546f92cf1)
+![Attention](https://github.com/parham1998/Enhancing-High-Vocabulary-IA-with-a-Novel-Attention-Based-Pooling/assets/85555218/44d24fe9-886d-4f65-bcf3-4175b55c8f0c)
 
 ## Train and Evaluation
 To train the model in Spyder IDE use the code below:
