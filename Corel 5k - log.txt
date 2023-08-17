@@ -1,0 +1,391 @@
+Head(
+  (transformer): Transformer(
+    (decoder): TransformerDecoder(
+      (layers): ModuleList(
+        (0): TransformerDecoderLayer(
+          (multihead_attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=1024, out_features=1024, bias=True)
+          )
+          (norm2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+          (dropout2): Dropout(p=0.1, inplace=False)
+          (linear1): Linear(in_features=1024, out_features=2048, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (linear2): Linear(in_features=2048, out_features=1024, bias=True)
+          (norm3): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+          (dropout3): Dropout(p=0.1, inplace=False)
+        )
+      )
+      (norm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+    )
+  )
+  (query_emb): Embedding(260, 1024)
+  (linear_projection): Conv2d(2048, 1024, kernel_size=(1, 1), stride=(1, 1))
+)
+
+Number of Backbone's learnable parameters: 29340032
+Number of Head's learnable parameters: 10766596
+
+Optimizer: Adam (
+Parameter Group 0
+    amsgrad: False
+    base_momentum: 0.85
+    betas: (0.95, 0.999)
+    eps: 1e-08
+    initial_lr: 4e-06
+    lr: 4.000000000000002e-06
+    max_lr: 0.0001
+    max_momentum: 0.95
+    maximize: False
+    min_lr: 3.9999999999999996e-10
+    weight_decay: 0
+)
+
+CUDA is available! Training on GPU ...
+_CudaDeviceProperties(name='Tesla P100-PCIE-16GB', major=6, minor=0, total_memory=16280MB, multi_processor_count=56)
+
+==> Start of Training ...
+Epoch: 1
+Train Loss: 0.05024
+N+: 215
+per-class precision: 0.0152 	 per-class recall: 0.1933 	 per-class f1: 0.0282
+per-image precision: 0.0214 	 per-image recall: 0.3102 	 per-image f1: 0.0400
+m_AP: 1.5963
+--------------------------------------------------------------------------------------------------
+Validation Loss: 0.01977
+N+: 21
+per-class precision: 0.0208 	 per-class recall: 0.0252 	 per-class f1: 0.0228
+per-image precision: 0.2223 	 per-image recall: 0.2528 	 per-image f1: 0.2366
+m_AP: 4.8965
+
+ema_N+: 78
+ema_per-class precision: 0.0166 	 ema_per-class recall: 0.1380 	 ema_per-class f1: 0.0296
+ema_per-image precision: 0.0360 	 ema_per-image recall: 0.3405 	 ema_per-image f1: 0.0651
+ema_m_AP: 3.7357
+per-class f1 increased (0.0000 --> 0.0228). saving model ...
+
+LR 7.7e-06
+time: 170.580
+==================================================================================================
+Epoch: 2
+Train Loss: 0.02208
+N+: 139
+per-class precision: 0.0227 	 per-class recall: 0.0882 	 per-class f1: 0.0361
+per-image precision: 0.0864 	 per-image recall: 0.3403 	 per-image f1: 0.1378
+m_AP: 2.6893
+--------------------------------------------------------------------------------------------------
+Validation Loss: 0.01802
+N+: 47
+per-class precision: 0.0970 	 per-class recall: 0.1036 	 per-class f1: 0.1002
+per-image precision: 0.3445 	 per-image recall: 0.4271 	 per-image f1: 0.3814
+m_AP: 14.8818
+
+ema_N+: 38
+ema_per-class precision: 0.0617 	 ema_per-class recall: 0.0697 	 ema_per-class f1: 0.0654
+ema_per-image precision: 0.2591 	 ema_per-image recall: 0.3667 	 ema_per-image f1: 0.3036
+ema_m_AP: 9.0534
+per-class f1 increased (0.0228 --> 0.1002). saving model ...
+
+LR 1.8e-05
+time: 168.692
+==================================================================================================
+Epoch: 3
+Train Loss: 0.01885
+N+: 151
+per-class precision: 0.0557 	 per-class recall: 0.1775 	 per-class f1: 0.0848
+per-image precision: 0.1571 	 per-image recall: 0.5109 	 per-image f1: 0.2403
+m_AP: 9.3594
+--------------------------------------------------------------------------------------------------
+Validation Loss: 0.01534
+N+: 88
+per-class precision: 0.1709 	 per-class recall: 0.2458 	 per-class f1: 0.2016
+per-image precision: 0.3736 	 per-image recall: 0.6219 	 per-image f1: 0.4668
+m_AP: 27.7541
+
+ema_N+: 65
+ema_per-class precision: 0.1379 	 ema_per-class recall: 0.1540 	 ema_per-class f1: 0.1455
+ema_per-image precision: 0.3781 	 ema_per-image recall: 0.5222 	 ema_per-image f1: 0.4387
+ema_m_AP: 20.9987
+per-class f1 increased (0.1002 --> 0.2016). saving model ...
+
+LR 3.4e-05
+time: 169.429
+==================================================================================================
+Epoch: 4
+Train Loss: 0.01581
+N+: 190
+per-class precision: 0.1200 	 per-class recall: 0.3185 	 per-class f1: 0.1743
+per-image precision: 0.2335 	 per-image recall: 0.6496 	 per-image f1: 0.3435
+m_AP: 18.6899
+--------------------------------------------------------------------------------------------------
+Validation Loss: 0.01373
+N+: 125
+per-class precision: 0.2435 	 per-class recall: 0.3751 	 per-class f1: 0.2953
+per-image precision: 0.4037 	 per-image recall: 0.7010 	 per-image f1: 0.5124
+m_AP: 39.8690
+
+ema_N+: 104
+ema_per-class precision: 0.2171 	 ema_per-class recall: 0.3034 	 ema_per-class f1: 0.2531
+ema_per-image precision: 0.4381 	 ema_per-image recall: 0.6595 	 ema_per-image f1: 0.5265
+ema_m_AP: 33.9774
+per-class f1 increased (0.2016 --> 0.2953). saving model ...
+
+LR 5.2e-05
+time: 169.060
+==================================================================================================
+Epoch: 5
+Train Loss: 0.01384
+N+: 206
+per-class precision: 0.1781 	 per-class recall: 0.4289 	 per-class f1: 0.2517
+per-image precision: 0.2905 	 per-image recall: 0.7256 	 per-image f1: 0.4149
+m_AP: 27.8012
+--------------------------------------------------------------------------------------------------
+Validation Loss: 0.01282
+N+: 147
+per-class precision: 0.2843 	 per-class recall: 0.4455 	 per-class f1: 0.3471
+per-image precision: 0.4235 	 per-image recall: 0.7249 	 per-image f1: 0.5346
+m_AP: 47.1557
+
+ema_N+: 138
+ema_per-class precision: 0.2711 	 ema_per-class recall: 0.4109 	 ema_per-class f1: 0.3267
+ema_per-image precision: 0.4462 	 ema_per-image recall: 0.7244 	 ema_per-image f1: 0.5522
+ema_m_AP: 43.8363
+per-class f1 increased (0.2953 --> 0.3471). saving model ...
+
+LR 7.0e-05
+time: 169.201
+==================================================================================================
+Epoch: 6
+Train Loss: 0.01241
+N+: 229
+per-class precision: 0.2337 	 per-class recall: 0.5274 	 per-class f1: 0.3239
+per-image precision: 0.3416 	 per-image recall: 0.7755 	 per-image f1: 0.4742
+m_AP: 36.5423
+--------------------------------------------------------------------------------------------------
+Validation Loss: 0.01271
+N+: 164
+per-class precision: 0.3115 	 per-class recall: 0.5076 	 per-class f1: 0.3860
+per-image precision: 0.4196 	 per-image recall: 0.7682 	 per-image f1: 0.5427
+m_AP: 53.6141
+
+ema_N+: 163
+ema_per-class precision: 0.3349 	 ema_per-class recall: 0.5069 	 ema_per-class f1: 0.4033
+ema_per-image precision: 0.4724 	 ema_per-image recall: 0.7688 	 ema_per-image f1: 0.5852
+ema_m_AP: 51.3237
+per-class f1 increased (0.3471 --> 0.3860). saving model ...
+
+LR 8.6e-05
+time: 169.406
+==================================================================================================
+Epoch: 7
+Train Loss: 0.01129
+N+: 235
+per-class precision: 0.2738 	 per-class recall: 0.5933 	 per-class f1: 0.3747
+per-image precision: 0.3743 	 per-image recall: 0.8113 	 per-image f1: 0.5123
+m_AP: 43.9035
+--------------------------------------------------------------------------------------------------
+Validation Loss: 0.01288
+N+: 172
+per-class precision: 0.3654 	 per-class recall: 0.5403 	 per-class f1: 0.4360
+per-image precision: 0.4303 	 per-image recall: 0.7739 	 per-image f1: 0.5531
+m_AP: 55.8698
+
+ema_N+: 179
+ema_per-class precision: 0.3612 	 ema_per-class recall: 0.5606 	 ema_per-class f1: 0.4393
+ema_per-image precision: 0.4746 	 ema_per-image recall: 0.7859 	 ema_per-image f1: 0.5918
+ema_m_AP: 55.3048
+per-class f1 increased (0.3860 --> 0.4360). saving model ...
+
+LR 9.6e-05
+time: 169.081
+==================================================================================================
+Epoch: 8
+Train Loss: 0.01010
+N+: 246
+per-class precision: 0.3254 	 per-class recall: 0.6676 	 per-class f1: 0.4376
+per-image precision: 0.4174 	 per-image recall: 0.8474 	 per-image f1: 0.5593
+m_AP: 51.1241
+--------------------------------------------------------------------------------------------------
+Validation Loss: 0.01308
+N+: 183
+per-class precision: 0.3948 	 per-class recall: 0.5709 	 per-class f1: 0.4668
+per-image precision: 0.4352 	 per-image recall: 0.7711 	 per-image f1: 0.5564
+m_AP: 56.4850
+
+ema_N+: 185
+ema_per-class precision: 0.3855 	 ema_per-class recall: 0.5839 	 ema_per-class f1: 0.4644
+ema_per-image precision: 0.4802 	 ema_per-image recall: 0.7956 	 ema_per-image f1: 0.5989
+ema_m_AP: 58.2264
+per-class f1 increased (0.4360 --> 0.4668). saving model ...
+
+LR 1.0e-04
+time: 169.098
+==================================================================================================
+Epoch: 9
+Train Loss: 0.00900
+N+: 252
+per-class precision: 0.3656 	 per-class recall: 0.7422 	 per-class f1: 0.4899
+per-image precision: 0.4572 	 per-image recall: 0.8804 	 per-image f1: 0.6019
+m_AP: 59.3522
+--------------------------------------------------------------------------------------------------
+Validation Loss: 0.01302
+N+: 191
+per-class precision: 0.4026 	 per-class recall: 0.5816 	 per-class f1: 0.4758
+per-image precision: 0.4682 	 per-image recall: 0.7722 	 per-image f1: 0.5830
+m_AP: 58.1995
+
+ema_N+: 189
+ema_per-class precision: 0.3896 	 ema_per-class recall: 0.5976 	 ema_per-class f1: 0.4717
+ema_per-image precision: 0.4873 	 ema_per-image recall: 0.7984 	 ema_per-image f1: 0.6052
+ema_m_AP: 59.3624
+per-class f1 increased (0.4668 --> 0.4758). saving model ...
+
+LR 1.0e-04
+time: 168.990
+==================================================================================================
+Epoch: 10
+Train Loss: 0.00803
+N+: 255
+per-class precision: 0.4149 	 per-class recall: 0.8176 	 per-class f1: 0.5504
+per-image precision: 0.4932 	 per-image recall: 0.9058 	 per-image f1: 0.6386
+m_AP: 68.3235
+--------------------------------------------------------------------------------------------------
+Validation Loss: 0.01376
+N+: 187
+per-class precision: 0.3981 	 per-class recall: 0.5810 	 per-class f1: 0.4725
+per-image precision: 0.4680 	 per-image recall: 0.7694 	 per-image f1: 0.5820
+m_AP: 58.8132
+
+ema_N+: 198
+ema_per-class precision: 0.4127 	 ema_per-class recall: 0.6135 	 ema_per-class f1: 0.4934
+ema_per-image precision: 0.4910 	 ema_per-image recall: 0.7921 	 ema_per-image f1: 0.6062
+ema_m_AP: 59.1236
+
+LR 9.9e-05
+time: 169.031
+==================================================================================================
+Epoch: 11
+Train Loss: 0.00688
+N+: 258
+per-class precision: 0.4573 	 per-class recall: 0.8744 	 per-class f1: 0.6005
+per-image precision: 0.5392 	 per-image recall: 0.9342 	 per-image f1: 0.6838
+m_AP: 75.8338
+--------------------------------------------------------------------------------------------------
+Validation Loss: 0.01408
+N+: 198
+per-class precision: 0.4309 	 per-class recall: 0.6064 	 per-class f1: 0.5038
+per-image precision: 0.4798 	 per-image recall: 0.7494 	 per-image f1: 0.5850
+m_AP: 59.4880
+
+ema_N+: 199
+ema_per-class precision: 0.4245 	 ema_per-class recall: 0.6181 	 ema_per-class f1: 0.5033
+ema_per-image precision: 0.5005 	 ema_per-image recall: 0.7847 	 ema_per-image f1: 0.6112
+ema_m_AP: 59.8891
+per-class f1 increased (0.4758 --> 0.5038). saving model ...
+
+LR 9.8e-05
+time: 169.181
+==================================================================================================
+Epoch: 12
+Train Loss: 0.00585
+N+: 260
+per-class precision: 0.4998 	 per-class recall: 0.9105 	 per-class f1: 0.6453
+per-image precision: 0.5827 	 per-image recall: 0.9539 	 per-image f1: 0.7235
+m_AP: 83.1056
+--------------------------------------------------------------------------------------------------
+Validation Loss: 0.01534
+N+: 189
+per-class precision: 0.4252 	 per-class recall: 0.5822 	 per-class f1: 0.4915
+per-image precision: 0.4720 	 per-image recall: 0.7489 	 per-image f1: 0.5790
+m_AP: 59.0188
+
+ema_N+: 199
+ema_per-class precision: 0.4388 	 ema_per-class recall: 0.6183 	 ema_per-class f1: 0.5133
+ema_per-image precision: 0.5143 	 ema_per-image recall: 0.7768 	 ema_per-image f1: 0.6189
+ema_m_AP: 60.4539
+
+LR 9.6e-05
+time: 168.617
+==================================================================================================
+Epoch: 13
+Train Loss: 0.00507
+N+: 260
+per-class precision: 0.5281 	 per-class recall: 0.9472 	 per-class f1: 0.6781
+per-image precision: 0.6169 	 per-image recall: 0.9647 	 per-image f1: 0.7526
+m_AP: 87.7415
+--------------------------------------------------------------------------------------------------
+Validation Loss: 0.01608
+N+: 183
+per-class precision: 0.4366 	 per-class recall: 0.5514 	 per-class f1: 0.4873
+per-image precision: 0.5098 	 per-image recall: 0.7432 	 per-image f1: 0.6047
+m_AP: 57.9269
+
+ema_N+: 203
+ema_per-class precision: 0.4428 	 ema_per-class recall: 0.6219 	 ema_per-class f1: 0.5173
+ema_per-image precision: 0.5246 	 ema_per-image recall: 0.7773 	 ema_per-image f1: 0.6264
+ema_m_AP: 59.9824
+
+LR 9.4e-05
+time: 168.933
+==================================================================================================
+Epoch: 14
+Train Loss: 0.00430
+N+: 260
+per-class precision: 0.5757 	 per-class recall: 0.9573 	 per-class f1: 0.7191
+per-image precision: 0.6599 	 per-image recall: 0.9724 	 per-image f1: 0.7862
+m_AP: 91.2831
+--------------------------------------------------------------------------------------------------
+Validation Loss: 0.01714
+N+: 193
+per-class precision: 0.4417 	 per-class recall: 0.5754 	 per-class f1: 0.4997
+per-image precision: 0.5096 	 per-image recall: 0.7426 	 per-image f1: 0.6044
+m_AP: 58.0502
+
+ema_N+: 194
+ema_per-class precision: 0.4281 	 ema_per-class recall: 0.5921 	 ema_per-class f1: 0.4969
+ema_per-image precision: 0.5298 	 ema_per-image recall: 0.7648 	 ema_per-image f1: 0.6260
+ema_m_AP: 58.9860
+
+LR 9.2e-05
+time: 168.679
+==================================================================================================
+Epoch: 15
+Train Loss: 0.00358
+N+: 260
+per-class precision: 0.5919 	 per-class recall: 0.9660 	 per-class f1: 0.7340
+per-image precision: 0.6908 	 per-image recall: 0.9802 	 per-image f1: 0.8104
+m_AP: 94.0517
+--------------------------------------------------------------------------------------------------
+Validation Loss: 0.01800
+N+: 190
+per-class precision: 0.4337 	 per-class recall: 0.5634 	 per-class f1: 0.4901
+per-image precision: 0.5247 	 per-image recall: 0.7136 	 per-image f1: 0.6047
+m_AP: 58.4319
+
+ema_N+: 202
+ema_per-class precision: 0.4535 	 ema_per-class recall: 0.6115 	 ema_per-class f1: 0.5208
+ema_per-image precision: 0.5354 	 ema_per-image recall: 0.7585 	 ema_per-image f1: 0.6277
+ema_m_AP: 59.5676
+
+LR 8.9e-05
+time: 168.545
+==================================================================================================
+Epoch: 16
+Train Loss: 0.00299
+N+: 260
+per-class precision: 0.6302 	 per-class recall: 0.9875 	 per-class f1: 0.7694
+per-image precision: 0.7245 	 per-image recall: 0.9877 	 per-image f1: 0.8359
+m_AP: 96.4561
+--------------------------------------------------------------------------------------------------
+Validation Loss: 0.01789
+N+: 188
+per-class precision: 0.4368 	 per-class recall: 0.5663 	 per-class f1: 0.4932
+per-image precision: 0.5438 	 per-image recall: 0.7392 	 per-image f1: 0.6266
+m_AP: 58.4896
+
+ema_N+: 196
+ema_per-class precision: 0.4450 	 ema_per-class recall: 0.5881 	 ema_per-class f1: 0.5067
+ema_per-image precision: 0.5459 	 ema_per-image recall: 0.7443 	 ema_per-image f1: 0.6299
+ema_m_AP: 59.5058
+
+LR 8.5e-05
+time: 168.987

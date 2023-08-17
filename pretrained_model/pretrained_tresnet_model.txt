@@ -1,0 +1,2 @@
+You can put here "tresnet_l_v2_miil_21k"
+Download it from "https://miil-public-eu.oss-eu-central-1.aliyuncs.com/model-zoo/ImageNet_21K_P/models/tresnet_l_v2_miil_21k.pth"
