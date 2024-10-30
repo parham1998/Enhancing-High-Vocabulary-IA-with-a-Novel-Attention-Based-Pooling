@@ -1,8 +1,8 @@
 # Enhancing-High-Vocabulary-IA-with-a-Novel-Attention-Based-Pooling
-Official Pytorch Implementation of: "Enhancing High-Vocabulary Image Annotation with a Novel Attention-Based Pooling"
+Official Pytorch Implementation of: "[Enhancing High-Vocabulary Image Annotation with a Novel Attention-Based Pooling](https://doi.org/10.1007/s00371-024-03618-6)"
 
 ## Datasets
-There are three well-known datasets that are mostly used in AIA tasks. In addition, we have utilized a dataset with a significantly larger number of images and a vocabulary list consisting of 500 words, which has a very high level of complexity. The table below provides details about these datasets. It is also possible to download them by the given links. (After downloading each dataset, replace its 'images' folder with the corresponding 'images' folder in the 'datasets' folder).
+Three well-known datasets are mostly used in AIA tasks. In addition, we have utilized a dataset with a significantly larger number of images and a vocabulary list consisting of 500 words, which has a very high level of complexity. The table below provides details about these datasets. It is also possible to download them from the links provided. (After downloading each dataset, replace its 'images' folder with the corresponding 'images' folder in the 'datasets' folder).
 
 | *Dataset* | *Num of images* | *Num of training images* | *Num of testing images*  | *Num of vocabularies*  | *Labels per image*  | *Image per label* |
 | :------------: | :-------------: | :-------------: | :-------------: | :------------: | :-------------: | :-------------: |
@@ -46,6 +46,17 @@ ESP Game | 0.442 | 0.500 | **0.470** | **262** | - |
 VG-500 | 0.409 | 0.502 | **0.451** | **477** | 42.515 |
 
 ## Citation
+Please consider citing our paper in your publications if the project helps your research. BibTeX reference is as follows:
+```
+@article{salar2024enhancing,
+  title={Enhancing high-vocabulary image annotation with a novel attention-based pooling},
+  author={Salar, Ali and Ahmadi, Ali},
+  journal={The Visual Computer},
+  pages={1--15},
+  year={2024},
+  publisher={Springer}
+}
+```
 
 ## Contact
 I would be happy to answer any questions you may have - Ali Salar (parham1998resume@gmail.com)
